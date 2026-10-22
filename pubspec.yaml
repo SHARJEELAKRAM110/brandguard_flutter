@@ -3,7 +3,8 @@ description: >-
   Catch white-label mistakes before release. Validates Flutter brand assets,
   application IDs, app names, ARB translations, and production URLs.
 version: 0.1.0
-# repository: Set this once a real public repository exists.
+repository: https://github.com/SHARJEELAKRAM110/brandguard_flutter
+issue_tracker: https://github.com/SHARJEELAKRAM110/brandguard_flutter/issues
 
 topics:
   - flutter

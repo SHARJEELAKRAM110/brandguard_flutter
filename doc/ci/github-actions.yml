@@ -40,5 +40,5 @@ jobs:
 # Alternative without adding a dev_dependency (Dart SDK only):
 #
 #      - uses: dart-lang/setup-dart@v1
-#      - run: dart pub global activate brandguard_flutter   # once published
+#      - run: dart pub global activate brandguard_flutter
 #      - run: dart pub global run brandguard_flutter:brandguard check --all --strict

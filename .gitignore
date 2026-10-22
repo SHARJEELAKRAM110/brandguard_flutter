@@ -6,3 +6,4 @@ coverage/
 example/**/.dart_tool/
 example/**/build/
 example/**/.flutter-plugins*
+.gradle/

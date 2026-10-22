@@ -61,33 +61,23 @@ Run `brandguard rules` to list the rules with their default severities.
 BrandGuard needs the Dart SDK 3.8 or later. Flutter is **not** required to run
 it.
 
-> **Status:** version 0.1.0 has not been published to pub.dev yet. Until it
-> is, use a path or git dependency. The commands below that reference
-> `pub.dev` will work only after publication.
-
 **As a dev dependency of your Flutter app** (recommended, version-pinned with
 your project):
 
-```yaml
-# pubspec.yaml
-dev_dependencies:
-  brandguard_flutter:
-    path: ../brandguard_flutter   # or a git dependency until published
-```
-
 ```bash
-flutter pub get
+flutter pub add --dev brandguard_flutter
 dart run brandguard_flutter check
 ```
 
 **As a global tool** (no changes to your app's `pubspec.yaml`):
 
 ```bash
-dart pub global activate --source path /path/to/brandguard_flutter
+dart pub global activate brandguard_flutter
 brandguard check
 ```
 
-After publication: `dart pub global activate brandguard_flutter`.
+The `brandguard` command is available once the pub cache `bin` directory is on
+your `PATH`; otherwise use `dart pub global run brandguard_flutter:brandguard`.
 
 Inside a project that depends on the package, `dart run brandguard_flutter`
 and `dart run brandguard_flutter:brandguard` are equivalent.

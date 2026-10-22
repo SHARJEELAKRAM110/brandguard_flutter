@@ -2,7 +2,7 @@
 
 ## 0.1.0
 
-Initial release (not yet published).
+Initial release.
 
 - `brandguard check`: validates brands with text or JSON (schema version 1)
   output, `--brand`/`--all` selection, `--strict`, `--quiet`, `--verbose`,
