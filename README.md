@@ -707,5 +707,3 @@ two brand flavors. See [example/README.md](example/README.md).
 - [CONTRIBUTING.md](CONTRIBUTING.md)
 - [CHANGELOG.md](CHANGELOG.md)
 - License: [MIT](LICENSE)
-#   b r a n d g u a r d _ f l u t t e r  
- 
