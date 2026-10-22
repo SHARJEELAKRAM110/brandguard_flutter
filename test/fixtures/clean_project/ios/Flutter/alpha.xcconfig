@@ -1,0 +1,3 @@
+#include? "Generated.xcconfig"
+BRAND_BUNDLE_ID = com.fixture.alpha
+BRAND_DISPLAY_NAME = Alpha Bank

@@ -1,0 +1,27 @@
+name: sample_white_label_project
+description: >-
+  Fictional white-label Flutter app used to demonstrate BrandGuard. The "nova"
+  brand contains intentional mistakes; see README.md.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.8.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  brandguard_flutter:
+    path: ../..
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/shared/
+    - assets/brands/acme/
+    - assets/brands/nova/
+    - config/acme/
+    - config/nova/

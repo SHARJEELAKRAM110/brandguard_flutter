@@ -1,0 +1,6 @@
+{
+  "display_name": "Nova Store",
+  "api_base_url": "https://staging-api.novastore.example/v1",
+  "analytics_url": "https://collect.novastore.example/ingest?api_key=nova-demo-not-a-real-key",
+  "support_url": "https://help.novastore.example"
+}

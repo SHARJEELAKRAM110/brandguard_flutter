@@ -1,0 +1,13 @@
+# Add to .gitlab-ci.yml. Assumes brandguard_flutter is a dev_dependency.
+validate-brands:
+  stage: test
+  image: ghcr.io/cirruslabs/flutter:stable
+  script:
+    - flutter pub get
+    - dart run brandguard_flutter check --all --strict --no-color
+  after_script:
+    - dart run brandguard_flutter check --all --format json > brandguard-report.json || true
+  artifacts:
+    when: always
+    paths:
+      - brandguard-report.json

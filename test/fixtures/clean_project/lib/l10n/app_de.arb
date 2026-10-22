@@ -1,0 +1,6 @@
+{
+  "@@locale": "de",
+  "balance": "Kontostand: {amount}",
+  "transfers": "{count, plural, =0{Keine Überweisungen} other{{count} Überweisungen}}",
+  "logout": "Abmelden"
+}

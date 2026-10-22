@@ -1,0 +1,31 @@
+# CI for the brandguard_flutter package itself.
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        sdk: ['3.8', stable]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dart-lang/setup-dart@v1
+        with:
+          sdk: ${{ matrix.sdk }}
+      - run: dart pub get
+      - run: dart format --output=none --set-exit-if-changed lib bin test tool
+      - run: dart analyze --fatal-infos
+      - run: dart test
+      - name: Sample project (expected to fail with exit code 1)
+        shell: bash
+        run: |
+          set +e
+          dart run brandguard_flutter check --project example/sample_white_label_project --no-color
+          code=$?
+          test "$code" -eq 1

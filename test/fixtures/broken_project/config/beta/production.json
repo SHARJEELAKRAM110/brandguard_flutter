@@ -1,0 +1,4 @@
+{
+  "api": "https://staging.beta-pay.example/v1",
+  "cdn": "https://cdn.beta-pay.example"
+}

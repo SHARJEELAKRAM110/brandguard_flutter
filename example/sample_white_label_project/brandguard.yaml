@@ -1,0 +1,90 @@
+# BrandGuard configuration for the fictional sample project.
+# "acme" is configured correctly; "nova" contains intentional mistakes
+# (see README.md).
+#
+# This sample uses the visible name `brandguard.yaml` because pub.dev drops
+# dotfiles from published packages. In your own project the default
+# `.brandguard.yaml` works the same way (use one name, not both).
+
+version: 1
+
+project:
+  name: retail_suite
+  root: .
+
+requirements:
+  brand_fields:
+    - name
+    - app_name
+    - application_id
+    - environment
+    - required_locales
+    - assets.launcher_icon
+    - assets.logo
+
+defaults:
+  environment: production
+
+assets:
+  require_declaration: true
+  declaration_exempt: [launcher_icon]
+  brands_root: assets/brands
+  isolation:
+    shared_paths:
+      - assets/shared/**
+
+localization:
+  arb_directory: lib/l10n
+  file_pattern: 'app_{locale}.arb'
+  base_locale: en
+  required_locales: [en, es, fr]
+  allow_empty_translations: false
+
+environments:
+  production:
+    files:
+      - config/{brand}/production.json
+    forbidden_url_patterns: [staging, dev-api]
+    forbidden_hosts: [api.internal.example]
+    block_loopback: true
+    heuristics: true
+  staging:
+    files:
+      - config/{brand}/staging.json
+    forbidden_url_patterns: [production-api]
+
+platforms:
+  android:
+    enabled: true
+  ios:
+    enabled: true
+    target: Runner
+
+rules:
+  brand_asset_leakage:
+    severity: warning
+  undeclared_assets:
+    severity: warning
+
+brands:
+  - id: acme
+    name: Acme Retail
+    app_name: Acme Retail
+    application_id: com.example.acme
+    environment: production
+    required_locales: [en, es]
+    assets:
+      launcher_icon: assets/brands/acme/app_icon.png
+      logo: assets/brands/acme/logo.png
+      placeholder: assets/shared/placeholder.png
+
+  - id: nova
+    name: Nova Store
+    app_name: Nova Store
+    application_id: com.example.nova
+    environment: production
+    required_locales: [en, fr]
+    assets:
+      launcher_icon: assets/brands/nova/app_icon.png
+      logo: assets/brands/nova/logo.png
+      banner: assets/brands/nova/banner.png

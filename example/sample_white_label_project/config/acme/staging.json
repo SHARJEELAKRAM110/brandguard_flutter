@@ -1,0 +1,5 @@
+{
+  "display_name": "Acme Retail (Staging)",
+  "api_base_url": "https://staging-api.acme-retail.example/v1",
+  "cdn_url": "https://cdn.staging.acme-retail.example"
+}

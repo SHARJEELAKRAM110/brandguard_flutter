@@ -1,0 +1,13 @@
+name: fixture_app
+publish_to: none
+environment:
+  sdk: ^3.8.0
+dependencies:
+  flutter:
+    sdk: flutter
+flutter:
+  assets:
+    - assets/brands/alpha/
+    - assets/brands/beta/
+    - config/alpha/
+    - config/beta/

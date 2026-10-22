@@ -1,0 +1,25 @@
+plugins {
+    id "com.android.application"
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    namespace "com.fixture.app"
+    defaultConfig {
+        applicationId "com.fixture.app"
+        minSdkVersion flutter.minSdkVersion
+    }
+    flavorDimensions "brand"
+    productFlavors {
+        alpha {
+            dimension "brand"
+            applicationId "com.fixture.alpha"
+            manifestPlaceholders = [appName: "Alpha Bank"]
+        }
+        beta {
+            dimension "brand"
+            applicationId "com.fixture.beta"
+            manifestPlaceholders = [appName: "Beta Pay"]
+        }
+    }
+}

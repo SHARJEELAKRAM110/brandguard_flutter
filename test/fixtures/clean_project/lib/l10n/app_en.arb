@@ -1,0 +1,8 @@
+{
+  "@@locale": "en",
+  "balance": "Balance: {amount}",
+  "@balance": {"placeholders": {"amount": {"type": "double"}}},
+  "transfers": "{count, plural, =0{No transfers} other{{count} transfers}}",
+  "@transfers": {"placeholders": {"count": {"type": "int"}}},
+  "logout": "Log out"
+}

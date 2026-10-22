@@ -1,0 +1,28 @@
+{
+  "@@locale": "en",
+  "appTitle": "Shop",
+  "@appTitle": {
+    "description": "Title shown on the home screen."
+  },
+  "welcomeMessage": "Welcome back, {name}!",
+  "@welcomeMessage": {
+    "description": "Greeting on the home screen.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "cartItems": "{count, plural, =0{Your cart is empty} =1{1 item in your cart} other{{count} items in your cart}}",
+  "@cartItems": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "checkoutConfirm": "Place order",
+  "@checkoutConfirm": {
+    "description": "Button that confirms checkout."
+  }
+}

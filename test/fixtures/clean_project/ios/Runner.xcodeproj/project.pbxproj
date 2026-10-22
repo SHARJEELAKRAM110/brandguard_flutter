@@ -1,0 +1,109 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	objects = {
+/* Begin PBXFileReference section */
+		AAAAAAAAAAAAAAAAAAAAAAA0 /* alpha.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = alpha.xcconfig; path = Flutter/alpha.xcconfig; sourceTree = "<group>"; };
+		AAAAAAAAAAAAAAAAAAAAAAA1 /* beta.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = beta.xcconfig; path = Flutter/beta.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+		AAAAAAAAAAAAAAAAAAAAAAAC /* Runner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAAAAAAAAAAAAAAAAAAAAAAA /* Build configuration list for PBXNativeTarget "Runner" */;
+			name = Runner;
+			productName = Runner;
+		};
+		AAAAAAAAAAAAAAAAAAAAAAAD /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = AAAAAAAAAAAAAAAAAAAAAAAB;
+		};
+		AAAAAAAAAAAAAAAAAAAAAAA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AAAAAAAAAAAAAAAAAAAAAAA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fixture.app;
+			};
+			name = Debug;
+		};
+		AAAAAAAAAAAAAAAAAAAAAAA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		AAAAAAAAAAAAAAAAAAAAAAA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fixture.app;
+			};
+			name = Release;
+		};
+		AAAAAAAAAAAAAAAAAAAAAAA7 /* Release-alpha */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SDKROOT = iphoneos;
+			};
+			name = "Release-alpha";
+		};
+		AAAAAAAAAAAAAAAAAAAAAAA6 /* Release-alpha */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAAAAAAAAAAAAAAAAAAAAAA0 /* alpha.xcconfig */;
+			buildSettings = {
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(BRAND_BUNDLE_ID)";
+			};
+			name = "Release-alpha";
+		};
+		AAAAAAAAAAAAAAAAAAAAAAA9 /* Release-beta */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SDKROOT = iphoneos;
+			};
+			name = "Release-beta";
+		};
+		AAAAAAAAAAAAAAAAAAAAAAA8 /* Release-beta */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAAAAAAAAAAAAAAAAAAAAAA1 /* beta.xcconfig */;
+			buildSettings = {
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(BRAND_BUNDLE_ID)";
+			};
+			name = "Release-beta";
+		};
+		AAAAAAAAAAAAAAAAAAAAAAAA /* Build configuration list */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAAAAAAAAAAAAAAAAAAAAAA2 /* Debug */,
+				AAAAAAAAAAAAAAAAAAAAAAA4 /* Release */,
+				AAAAAAAAAAAAAAAAAAAAAAA6 /* Release-alpha */,
+				AAAAAAAAAAAAAAAAAAAAAAA8 /* Release-beta */,
+			);
+		};
+		AAAAAAAAAAAAAAAAAAAAAAAB /* Build configuration list */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAAAAAAAAAAAAAAAAAAAAAA3 /* Debug */,
+				AAAAAAAAAAAAAAAAAAAAAAA5 /* Release */,
+				AAAAAAAAAAAAAAAAAAAAAAA7 /* Release-alpha */,
+				AAAAAAAAAAAAAAAAAAAAAAA9 /* Release-beta */,
+			);
+		};
+	};
+	rootObject = AAAAAAAAAAAAAAAAAAAAAAAD /* Project object */;
+}

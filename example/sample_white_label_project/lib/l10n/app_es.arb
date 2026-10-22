@@ -1,0 +1,7 @@
+{
+  "@@locale": "es",
+  "appTitle": "Tienda",
+  "welcomeMessage": "¡Bienvenido de nuevo, {name}!",
+  "cartItems": "{count, plural, =0{Tu carrito está vacío} =1{1 artículo en tu carrito} other{{count} artículos en tu carrito}}",
+  "checkoutConfirm": "Realizar pedido"
+}

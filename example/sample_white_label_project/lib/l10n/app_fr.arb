@@ -1,0 +1,6 @@
+{
+  "@@locale": "fr",
+  "appTitle": "Boutique",
+  "welcomeMessage": "Bon retour, {nom} !",
+  "cartItems": "{count, plural, =0{Votre panier est vide} one{1 article dans votre panier} other{{count} articles dans votre panier}}"
+}

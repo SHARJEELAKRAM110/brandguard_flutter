@@ -1,0 +1,6 @@
+{
+  "display_name": "Acme Retail",
+  "api_base_url": "https://api.acme-retail.example/v1",
+  "cdn_url": "https://cdn.acme-retail.example",
+  "support_url": "https://help.acme-retail.example/contact"
+}

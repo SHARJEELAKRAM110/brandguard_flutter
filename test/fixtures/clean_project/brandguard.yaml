@@ -1,0 +1,28 @@
+version: 1
+project:
+  name: fixture_suite
+defaults:
+  environment: production
+localization:
+  arb_directory: lib/l10n
+  base_locale: en
+  required_locales: [en, de]
+environments:
+  production:
+    files: ['config/{brand}/production.json']
+    forbidden_url_patterns: [staging]
+brands:
+  - id: alpha
+    name: Alpha Bank
+    app_name: Alpha Bank
+    application_id: com.fixture.alpha
+    assets:
+      launcher_icon: assets/brands/alpha/icon.png
+      logo: assets/brands/alpha/logo.png
+  - id: beta
+    name: Beta Pay
+    app_name: Beta Pay
+    application_id: com.fixture.beta
+    assets:
+      launcher_icon: assets/brands/beta/icon.png
+      logo: assets/brands/beta/logo.png

@@ -1,0 +1,13 @@
+.dart_tool/
+build/
+coverage/
+pubspec.lock
+example/**/.dart_tool/
+example/**/build/
+example/**/.flutter-plugins*
+example/**/.idea/
+example/**/*.iml
+example/**/android/.gradle/
+example/**/android/local.properties
+example/**/ios/Flutter/Generated.xcconfig
+example/**/ios/Flutter/flutter_export_environment.sh

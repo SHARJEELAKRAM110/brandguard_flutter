@@ -1,0 +1,44 @@
+# Copy to .github/workflows/brandguard.yml in your Flutter app repository.
+# Assumes brandguard_flutter is a dev_dependency of the app.
+name: White-Label Validation
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  validate-brands:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # `flutter pub get` needs the Flutter SDK because the app depends on it.
+      # BrandGuard itself only needs Dart, which Flutter includes.
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Validate brands
+        # The step fails on exit code 1 (findings) or 2 (configuration error).
+        run: dart run brandguard_flutter check --all --strict --no-color
+
+      - name: JSON report
+        if: always()
+        run: dart run brandguard_flutter check --all --format json > brandguard-report.json || true
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: brandguard-report
+          path: brandguard-report.json
+
+# Alternative without adding a dev_dependency (Dart SDK only):
+#
+#      - uses: dart-lang/setup-dart@v1
+#      - run: dart pub global activate brandguard_flutter   # once published
+#      - run: dart pub global run brandguard_flutter:brandguard check --all --strict
